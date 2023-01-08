@@ -13,14 +13,14 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
-    WebDriver driver;
+   protected WebDriver driver;
 
     @Before
     public void setup() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        //WebDriverManager.firefoxdriver().setup();
-        //driver = new FirefoxDriver();
+       WebDriverManager.chromedriver().setup();
+       driver = new ChromeDriver();
+//        WebDriverManager.firefoxdriver().setup();
+//        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
